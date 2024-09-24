@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{9169438C-CE97-482A-A04D-5EAB13F4CCB7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{3FB5D7D0-0136-471A-A101-0FE0B18BFC71}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{6752FBE7-EF6F-425A-9640-1C2D1A64986D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Valibute", "..\Valibute\Valibute\Valibute.csproj", "{FB547840-9950-4C0A-A73F-AE6F7198A5F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{C080CA83-954A-4752-851B-9F502CD9A06C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LSAppointmentManager.Entities", "LSAppointmentManager.Entities\LSAppointmentManager.Entities.csproj", "{EEE70EA7-59EF-4DBB-B045-04607F4A6A3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LSAppointmentManager.Repositories", "LSAppointmentManager.Repositories\LSAppointmentManager.Repositories.csproj", "{12F9032D-DA4E-4CA2-988B-9FA3426EAFE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LSAppointmentManager.VSA", "LSAppointmentManager.VSA\LSAppointmentManager.VSA.csproj", "{BD5FDF84-CE90-46E6-8DE4-6C84ADA45A97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LSAppointmentManager.VSA.WebApi", "LSAppointmentManager.VSA.WebApi\LSAppointmentManager.VSA.WebApi.csproj", "{91AEB5A8-589C-4D61-A845-0A9E5685FFA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB547840-9950-4C0A-A73F-AE6F7198A5F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB547840-9950-4C0A-A73F-AE6F7198A5F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB547840-9950-4C0A-A73F-AE6F7198A5F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB547840-9950-4C0A-A73F-AE6F7198A5F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEE70EA7-59EF-4DBB-B045-04607F4A6A3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEE70EA7-59EF-4DBB-B045-04607F4A6A3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEE70EA7-59EF-4DBB-B045-04607F4A6A3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEE70EA7-59EF-4DBB-B045-04607F4A6A3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12F9032D-DA4E-4CA2-988B-9FA3426EAFE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12F9032D-DA4E-4CA2-988B-9FA3426EAFE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12F9032D-DA4E-4CA2-988B-9FA3426EAFE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12F9032D-DA4E-4CA2-988B-9FA3426EAFE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD5FDF84-CE90-46E6-8DE4-6C84ADA45A97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD5FDF84-CE90-46E6-8DE4-6C84ADA45A97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD5FDF84-CE90-46E6-8DE4-6C84ADA45A97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD5FDF84-CE90-46E6-8DE4-6C84ADA45A97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91AEB5A8-589C-4D61-A845-0A9E5685FFA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91AEB5A8-589C-4D61-A845-0A9E5685FFA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91AEB5A8-589C-4D61-A845-0A9E5685FFA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91AEB5A8-589C-4D61-A845-0A9E5685FFA6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FB547840-9950-4C0A-A73F-AE6F7198A5F9} = {6752FBE7-EF6F-425A-9640-1C2D1A64986D}
+		{C080CA83-954A-4752-851B-9F502CD9A06C} = {9169438C-CE97-482A-A04D-5EAB13F4CCB7}
+		{EEE70EA7-59EF-4DBB-B045-04607F4A6A3E} = {C080CA83-954A-4752-851B-9F502CD9A06C}
+		{12F9032D-DA4E-4CA2-988B-9FA3426EAFE7} = {C080CA83-954A-4752-851B-9F502CD9A06C}
+		{BD5FDF84-CE90-46E6-8DE4-6C84ADA45A97} = {9169438C-CE97-482A-A04D-5EAB13F4CCB7}
+		{91AEB5A8-589C-4D61-A845-0A9E5685FFA6} = {9169438C-CE97-482A-A04D-5EAB13F4CCB7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C00B80E6-60DF-4271-A6B5-D09B2C52BB2D}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.8" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Valibute\Valibute\Valibute.csproj" />
+    <ProjectReference Include="..\LSAppointmenteManager.Application\LSAppointmentManager.Application.csproj" />
+    <ProjectReference Include="..\LSAppointmentManager.Entities\LSAppointmentManager.Entities.csproj" />
+    <ProjectReference Include="..\LSAppointmentManager.Persistance\LSAppointmentManager.Persistance.csproj" />
+  </ItemGroup>
+
+</Project>
