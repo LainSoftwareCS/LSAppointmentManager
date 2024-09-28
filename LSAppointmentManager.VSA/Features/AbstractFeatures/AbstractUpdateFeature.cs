@@ -25,7 +25,8 @@ namespace LSAppointmentManager.VSA.Features.AbstractFeatures
             public void MapEndpoint(IEndpointRouteBuilder app, string entityName)
             {
                 app.MapPut(entityName + "/{id}", Handler)
-                    .Produces<TResponse>(200);
+                    .Produces<TResponse>(200)
+                    .WithTags(entityName);
             }
 
             public static async Task<IResult> Handler(AbstractRepository<TEntity> repository, IMapper mapper, int id, TRequest request)

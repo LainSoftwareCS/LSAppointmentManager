@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Valibute.Attributes;
 
-namespace LSAppointmentManager.VSA.Features.WorkstationFeatures
+namespace LSAppointmentManager.VSA.Profiles
 {
     public class WorkstationProfiles : Profile
     {

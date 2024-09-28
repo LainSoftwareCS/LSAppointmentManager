@@ -1,11 +1,12 @@
-﻿using Microsoft.AspNetCore.Routing;
+﻿using LSAppointmentManager.VSA.Features.WorkstationFeatures;
+using Microsoft.AspNetCore.Routing;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LSAppointmentManager.VSA.Features.WorkstationFeatures
+namespace LSAppointmentManager.VSA.Services.Endpoints
 {
     public static class WorkstationEndpointRegistration
     {

@@ -20,6 +20,7 @@ namespace LSAppointmentManager.VSA.Features.AbstractFeatures
             public void MapEndpoint(IEndpointRouteBuilder app, string entityName)
             {
                 app.MapPost(entityName, Handler)
+                    .WithTags(entityName)
                     .Produces<TResponse>(200);
                     
             }

@@ -14,7 +14,8 @@ namespace LSAppointmentManager.VSA.Features.AbstractFeatures
         {
             public void MapEndpoint(IEndpointRouteBuilder app, string entityName)
             {
-                app.MapDelete(entityName + "/{id}", Handler);
+                app.MapDelete(entityName + "/{id}", Handler)
+                    .WithTags(entityName);
             }
 
             public static async Task<IResult> Handler(AbstractRepository<TEntity> repository, int id)

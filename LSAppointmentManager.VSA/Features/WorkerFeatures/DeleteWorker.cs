@@ -6,11 +6,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static LSAppointmentManager.VSA.Profiles.WorkstationProfiles;
 
-namespace LSAppointmentManager.VSA.Features.WorkstationFeatures
+namespace LSAppointmentManager.VSA.Features.WorkerFeatures
 {
-    public class GetWorkstation : AbstractGetByIdFeature<WorkstationRepository, Workstation, WorkstationGet.Response>
+    public class DeleteWorker : AbstractDeleteFeature<WorkerRepository, Worker>
     {
     }
 }
