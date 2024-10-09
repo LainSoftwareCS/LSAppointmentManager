@@ -7,16 +7,16 @@ namespace LSAppointmentManager.Repositories.Repositories
 {
     public class AbstractRepository<T>  where T : AuditableEntity
     {
-        private readonly LSAppointmentManagerContext _context;
+        public readonly LSAppointmentManagerContext context;
 
         public AbstractRepository(LSAppointmentManagerContext context)
         {
-            _context = context;
+            this.context = context;
         }
         public async Task DeleteAsync(T entity)
         {
-            _context.Set<T>().Remove(entity);
-            await _context.SaveChangesAsync();
+            context.Set<T>().Remove(entity);
+            await context.SaveChangesAsync();
         }
 
         public async Task DeleteByIdAsync(int id)
@@ -26,36 +26,41 @@ namespace LSAppointmentManager.Repositories.Repositories
             {
                 throw new Exception("No existe la entidad en la base de datos");
             }
-            _context.Remove(entity);
-            await _context.SaveChangesAsync();
+            context.Remove(entity);
+            await context.SaveChangesAsync();
         }
 
         public async Task<List<T>> GetAllAsync()
         {
-            return await _context.Set<T>().ToListAsync();
+            return await context.Set<T>().ToListAsync();
         }
 
         public async Task<T?> GetByIdAsync(int id)
         {
-            return await _context.Set<T>().FirstOrDefaultAsync(x => x.Id == id);
+            return await context.Set<T>().FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<T> SaveAsync(T entity)
         {
-            _context.Add(entity);
+            context.Add(entity);
             entity.CreatedDate = DateTime.Now;
-            await _context.SaveChangesAsync();
+            await context.SaveChangesAsync();
             return entity;
         }
 
         public async Task<T> UpdateAsync(T entity)
         {
-            _context.Entry(entity).State = EntityState.Modified;
-            _context.Entry(entity).Property(p => p.CreatedBy).IsModified = false;
-            _context.Entry(entity).Property(p => p.CreatedDate).IsModified = false;
+            context.Entry(entity).State = EntityState.Modified;
+            context.Entry(entity).Property(p => p.CreatedBy).IsModified = false;
+            context.Entry(entity).Property(p => p.CreatedDate).IsModified = false;
             entity.ModifiedDate = DateTime.Now;
-            await _context.SaveChangesAsync();
+            await context.SaveChangesAsync();
             return entity;
+        }
+
+        public async Task<bool> ExistsAny(int id)
+        {
+            return await context.Set<T>().AnyAsync(x => x.Id == id); 
         }
     }
 }

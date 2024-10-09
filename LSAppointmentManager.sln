@@ -15,11 +15,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{C080CA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LSAppointmentManager.Entities", "LSAppointmentManager.Entities\LSAppointmentManager.Entities.csproj", "{EEE70EA7-59EF-4DBB-B045-04607F4A6A3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LSAppointmentManager.Repositories", "LSAppointmentManager.Repositories\LSAppointmentManager.Repositories.csproj", "{12F9032D-DA4E-4CA2-988B-9FA3426EAFE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LSAppointmentManager.Repositories", "LSAppointmentManager.Repositories\LSAppointmentManager.Repositories.csproj", "{12F9032D-DA4E-4CA2-988B-9FA3426EAFE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LSAppointmentManager.VSA", "LSAppointmentManager.VSA\LSAppointmentManager.VSA.csproj", "{BD5FDF84-CE90-46E6-8DE4-6C84ADA45A97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LSAppointmentManager.VSA", "LSAppointmentManager.VSA\LSAppointmentManager.VSA.csproj", "{BD5FDF84-CE90-46E6-8DE4-6C84ADA45A97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LSAppointmentManager.VSA.WebApi", "LSAppointmentManager.VSA.WebApi\LSAppointmentManager.VSA.WebApi.csproj", "{91AEB5A8-589C-4D61-A845-0A9E5685FFA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LSAppointmentManager.VSA.WebApi", "LSAppointmentManager.VSA.WebApi\LSAppointmentManager.VSA.WebApi.csproj", "{91AEB5A8-589C-4D61-A845-0A9E5685FFA6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LSAppointmentManager.Migrator", "LSAppointmentManager.Migrator\LSAppointmentManager.Migrator.csproj", "{29EE64F7-6023-489C-AC8A-AA75B7FBEE90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{91AEB5A8-589C-4D61-A845-0A9E5685FFA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91AEB5A8-589C-4D61-A845-0A9E5685FFA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91AEB5A8-589C-4D61-A845-0A9E5685FFA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29EE64F7-6023-489C-AC8A-AA75B7FBEE90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29EE64F7-6023-489C-AC8A-AA75B7FBEE90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29EE64F7-6023-489C-AC8A-AA75B7FBEE90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29EE64F7-6023-489C-AC8A-AA75B7FBEE90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +64,7 @@ Global
 		{12F9032D-DA4E-4CA2-988B-9FA3426EAFE7} = {C080CA83-954A-4752-851B-9F502CD9A06C}
 		{BD5FDF84-CE90-46E6-8DE4-6C84ADA45A97} = {9169438C-CE97-482A-A04D-5EAB13F4CCB7}
 		{91AEB5A8-589C-4D61-A845-0A9E5685FFA6} = {9169438C-CE97-482A-A04D-5EAB13F4CCB7}
+		{29EE64F7-6023-489C-AC8A-AA75B7FBEE90} = {C080CA83-954A-4752-851B-9F502CD9A06C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C00B80E6-60DF-4271-A6B5-D09B2C52BB2D}

@@ -1,7 +1,9 @@
 ﻿using LSAppointmentManager.Entities.Abstract;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LSAppointmentManager.Entities
 {
+    [Table("Customer")]
     public class Customer : AuditableEntity
     {
         public string? Name { get; set; } 

@@ -1,6 +1,6 @@
 ﻿using FluentMigrator.Runner;
 using FluentMigrator.Runner.Initialization;
-using LSAppointmentManager.Persistance;
+using LSAppointmentManager.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace LSAppointmentManager.Migrator

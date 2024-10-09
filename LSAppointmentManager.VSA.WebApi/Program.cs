@@ -48,5 +48,5 @@ app.UseHttpsRedirection();
 app.AddWorkstationEndpoints();
 app.AddCustomerEndpoints();
 app.AddWorkerEndpoints();
-
+app.AddAppointmentEndpoints();
 app.Run();
