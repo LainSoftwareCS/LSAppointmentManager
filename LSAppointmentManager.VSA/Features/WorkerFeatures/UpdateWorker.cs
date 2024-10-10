@@ -10,7 +10,7 @@ using static LSAppointmentManager.VSA.Profiles.WorkerProfiles;
 
 namespace LSAppointmentManager.VSA.Features.WorkerFeatures
 {
-    public class UpdateWorker : AbstractUpdateFeature<WorkerRepository, Worker, WorkerUpdate.Request, WorkerUpdate.Response>
+    public class UpdateWorker : AbstractUpdateFeature<WorkerRepository, Worker, UpdateWorkerDto.Request, UpdateWorkerDto.Response>
     {
     }
 }

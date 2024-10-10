@@ -14,7 +14,7 @@ namespace LSAppointmentManager.VSA.Profiles
 {
     public class CustomerProfiles : Profile
     {
-        public class CustomerCreate
+        public class CreateCustomerDto
         {
             [DisplayName("CreateCustomerRequest")]
             public class Request
@@ -47,7 +47,7 @@ namespace LSAppointmentManager.VSA.Profiles
             }
         }
 
-        public class CustomerUpdate
+        public class UpdateCustomerDto
         {
             [DisplayName("UpdateCustomerRequest")]
             public class Request : IUpdateRequest
@@ -82,7 +82,7 @@ namespace LSAppointmentManager.VSA.Profiles
             }
         }
 
-        public class CustomerGet
+        public class GetCustomerDto
         {
             [DisplayName("GetCustomerResponse")]
             public class Response
@@ -102,11 +102,11 @@ namespace LSAppointmentManager.VSA.Profiles
 
         public CustomerProfiles()
         {
-            CreateMap<CustomerCreate.Request, Customer>();
-            CreateMap<Customer, CustomerCreate.Response>();
-            CreateMap<CustomerUpdate.Request, Customer>();
-            CreateMap<Customer, CustomerUpdate.Response>();
-            CreateMap<Customer, CustomerGet.Response>();
+            CreateMap<CreateCustomerDto.Request, Customer>();
+            CreateMap<Customer, CreateCustomerDto.Response>();
+            CreateMap<UpdateCustomerDto.Request, Customer>();
+            CreateMap<Customer, UpdateCustomerDto.Response>();
+            CreateMap<Customer, GetCustomerDto.Response>();
         }
     }
 }

@@ -13,7 +13,7 @@ namespace LSAppointmentManager.VSA.Profiles
 {
     public class WorkstationProfiles : Profile
     {
-        public class WorkstationCreate()
+        public class CreateWorkstationDto()
         {
             [DisplayName("WorkstationCreateRequest")]
             public class Request()
@@ -29,7 +29,7 @@ namespace LSAppointmentManager.VSA.Profiles
                 public DateTime CreatedDate { get; set; }
             }
         }
-        public class WorkstationUpdate
+        public class UpdateWorkstationDto
         {
             [DisplayName("WorkstationUpdateRequest")]
             public class Request : IUpdateRequest
@@ -46,7 +46,7 @@ namespace LSAppointmentManager.VSA.Profiles
                 public DateTime ModifiedDate { get; set; }
             }
         }
-        public class WorkstationGet
+        public class GetWorkstationDto
         {
             [DisplayName("WorkstationGetResponse")]
             public class Response
@@ -57,11 +57,11 @@ namespace LSAppointmentManager.VSA.Profiles
         }
         public WorkstationProfiles()
         {
-            CreateMap<WorkstationCreate.Request, Workstation>();
-            CreateMap<Workstation, WorkstationCreate.Response>();
-            CreateMap<WorkstationUpdate.Request, Workstation>();
-            CreateMap<Workstation, WorkstationUpdate.Response>();
-            CreateMap<Workstation, WorkstationGet.Response>();
+            CreateMap<CreateWorkstationDto.Request, Workstation>();
+            CreateMap<Workstation, CreateWorkstationDto.Response>();
+            CreateMap<UpdateWorkstationDto.Request, Workstation>();
+            CreateMap<Workstation, UpdateWorkstationDto.Response>();
+            CreateMap<Workstation, GetWorkstationDto.Response>();
 
         }
     }

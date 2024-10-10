@@ -12,7 +12,7 @@ namespace LSAppointmentManager.VSA.Profiles
 {
     public class AppointmentProfiles : Profile
     {
-        public class AppointmentCreate
+        public class CreateAppointmentDto
         {
             [DisplayName("AppointmentCreateRequest")]
             public class Request
@@ -45,7 +45,7 @@ namespace LSAppointmentManager.VSA.Profiles
             }
         }
 
-        public class AppointmentGetAllByDateRange
+        public class GetAllAppointmentsByDateRangeDto
         {
             [DisplayName("AppointmentGetAllByDateRangeResponse")]
             public class Response
@@ -72,9 +72,9 @@ namespace LSAppointmentManager.VSA.Profiles
         }
         public AppointmentProfiles()
         {
-            CreateMap<AppointmentCreate.Request, Appointment>();
-            CreateMap<Appointment, AppointmentCreate.Response>();
-            CreateMap<Appointment, AppointmentGetAllByDateRange.Response>();
+            CreateMap<CreateAppointmentDto.Request, Appointment>();
+            CreateMap<Appointment, CreateAppointmentDto.Response>();
+            CreateMap<Appointment, GetAllAppointmentsByDateRangeDto.Response>();
 
         }
     }

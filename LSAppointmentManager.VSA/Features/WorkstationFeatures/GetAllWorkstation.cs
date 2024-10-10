@@ -10,7 +10,7 @@ using static LSAppointmentManager.VSA.Profiles.WorkstationProfiles;
 
 namespace LSAppointmentManager.VSA.Features.WorkstationFeatures
 {
-    public class GetAllWorkstation : AbstractGetAllFeature<WorkstationRepository, Workstation, WorkstationGet.Response>
+    public class GetAllWorkstation : AbstractGetAllFeature<WorkstationRepository, Workstation, GetWorkstationDto.Response>
     {
 
     }

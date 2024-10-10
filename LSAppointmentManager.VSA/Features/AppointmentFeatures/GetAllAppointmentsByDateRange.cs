@@ -23,15 +23,15 @@ namespace LSAppointmentManager.VSA.Features.AppointmentFeatures
             {
                 app.MapGet($"/{entityName}/calendar", Handler)
                     .WithTags(entityName)
-                    .Produces<List<AppointmentGetAllByDateRange.Response>>();
+                    .Produces<List<GetAllAppointmentsByDateRangeDto.Response>>();
             }
 
-            public async Task<List<AppointmentGetAllByDateRange.Response>> Handler(int year, int startMonth, int startDay, int endMonth, int endDay, AppointmentRepository appointmentRepository, IMapper mapper)
+            public async Task<List<GetAllAppointmentsByDateRangeDto.Response>> Handler(int year, int startMonth, int startDay, int endMonth, int endDay, AppointmentRepository appointmentRepository, IMapper mapper)
             {
                 var startDate = new DateTime(year, startMonth, startDay,0,0,0);
                 var endDate = new DateTime(year, endMonth, endDay,23,59,59);
                 List<Appointment> appointments = await appointmentRepository.GetAllByDateRangeAsync(startDate, endDate);
-                var result = mapper.Map<List<AppointmentGetAllByDateRange.Response>>(appointments);
+                var result = mapper.Map<List<GetAllAppointmentsByDateRangeDto.Response>>(appointments);
                 return result;
             }
         }

@@ -5,7 +5,7 @@ using static LSAppointmentManager.VSA.Profiles.CustomerProfiles;
 
 namespace LSAppointmentManager.VSA.Features.CustomerFeatures
 {
-    public class GetAllCustomer : AbstractGetAllFeature<CustomerRepository, Customer, CustomerGet.Response>
+    public class GetAllCustomer : AbstractGetAllFeature<CustomerRepository, Customer, GetCustomerDto.Response>
     {
     }
 }

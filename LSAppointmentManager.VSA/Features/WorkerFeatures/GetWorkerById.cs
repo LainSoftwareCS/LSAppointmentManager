@@ -10,7 +10,7 @@ using static LSAppointmentManager.VSA.Profiles.WorkerProfiles;
 
 namespace LSAppointmentManager.VSA.Features.WorkerFeatures
 {
-    public class GetWorkerById : AbstractGetByIdFeature<WorkerRepository, Worker, WorkerGet.Response>
+    public class GetWorkerById : AbstractGetByIdFeature<WorkerRepository, Worker, GetWorkerDto.Response>
     {
     }
 }

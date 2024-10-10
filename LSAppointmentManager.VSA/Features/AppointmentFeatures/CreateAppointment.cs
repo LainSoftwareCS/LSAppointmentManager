@@ -23,10 +23,10 @@ namespace LSAppointmentManager.VSA.Features.AppointmentFeatures
             {
                 app.MapPost(entityName, Handler)
                    .WithTags(entityName)
-                   .Produces<AppointmentCreate.Response>(200);
+                   .Produces<CreateAppointmentDto.Response>(200);
             }
 
-            public async Task<IResult> Handler(AppointmentCreate.Request request, 
+            public async Task<IResult> Handler(CreateAppointmentDto.Request request, 
                 AppointmentRepository appointmentRepository, 
                 CustomerRepository customerRepository,
                 WorkerRepository workerRepository,
@@ -74,7 +74,7 @@ namespace LSAppointmentManager.VSA.Features.AppointmentFeatures
                 appointment.Guid = Guid.NewGuid();
                 appointment = await appointmentRepository.SaveAsync(appointment);
 
-                return Results.Ok(mapper.Map<AppointmentCreate.Response>(appointment));
+                return Results.Ok(mapper.Map<CreateAppointmentDto.Response>(appointment));
 
             }
         }

@@ -10,7 +10,7 @@ using static LSAppointmentManager.VSA.Profiles.WorkerProfiles;
 
 namespace LSAppointmentManager.VSA.Features.WorkerFeatures
 {
-    public class CreateWorker : AbstractCreateFeature<WorkerRepository, Worker, WorkerCreate.Request, WorkerCreate.Response>
+    public class CreateWorker : AbstractCreateFeature<WorkerRepository, Worker, CreateWorkerDto.Request, CreateWorkerDto.Response>
     {
     }
 }

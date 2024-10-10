@@ -13,7 +13,7 @@ namespace LSAppointmentManager.VSA.Profiles
 {
     public class WorkerProfiles : Profile
     {
-        public class WorkerCreate
+        public class CreateWorkerDto
         {
             [DisplayName("CreateWorkerRequest")]
             public class Request
@@ -49,7 +49,7 @@ namespace LSAppointmentManager.VSA.Profiles
             }
         }
 
-        public class WorkerUpdate
+        public class UpdateWorkerDto
         {
             [DisplayName("UpdateWorkerRequest")]
             public class Request : IUpdateRequest
@@ -86,7 +86,7 @@ namespace LSAppointmentManager.VSA.Profiles
             }
         }
 
-        public class WorkerGet
+        public class GetWorkerDto
         {
             [DisplayName("GetWorkerResponse")]
             public class Response
@@ -107,11 +107,11 @@ namespace LSAppointmentManager.VSA.Profiles
 
         public WorkerProfiles()
         {
-            CreateMap<WorkerCreate.Request, Worker>();
-            CreateMap<Worker, WorkerCreate.Response>();
-            CreateMap<WorkerUpdate.Request, Worker>();
-            CreateMap<Worker, WorkerUpdate.Response>();
-            CreateMap<Worker, WorkerGet.Response>();
+            CreateMap<CreateWorkerDto.Request, Worker>();
+            CreateMap<Worker, CreateWorkerDto.Response>();
+            CreateMap<UpdateWorkerDto.Request, Worker>();
+            CreateMap<Worker, UpdateWorkerDto.Response>();
+            CreateMap<Worker, GetWorkerDto.Response>();
         }
     }
 }

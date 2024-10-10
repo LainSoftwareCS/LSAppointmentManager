@@ -5,7 +5,7 @@ using static LSAppointmentManager.VSA.Profiles.WorkstationProfiles;
 
 namespace LSAppointmentManager.VSA.Features.WorkstationFeatures
 {
-    public class CreateWorkstation : AbstractCreateFeature<WorkstationRepository, Workstation, WorkstationCreate.Request, WorkstationCreate.Response> 
+    public class CreateWorkstation : AbstractCreateFeature<WorkstationRepository, Workstation, CreateWorkstationDto.Request, CreateWorkstationDto.Response> 
     {
     }
 }
