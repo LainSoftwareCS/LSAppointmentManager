@@ -3,6 +3,7 @@ using LSAppointmentManager.VSA.Services;
 using System.ComponentModel;
 using System.Reflection;
 using LSAppointmentManager.VSA.Services.Endpoints;
+using LSAppointmentManager.Infrastructure.Impl.Security;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +22,7 @@ builder.Services.AddSwaggerGen(c =>
         return x.Name;
     });
 });
+builder.Services.AddSecurityServices();
 builder.Services.AddMapping();
 builder.Services.AddRepositories(builder.Configuration);
 builder.Services.AddCors();
