@@ -51,4 +51,6 @@ app.AddWorkstationEndpoints();
 app.AddCustomerEndpoints();
 app.AddWorkerEndpoints();
 app.AddAppointmentEndpoints();
+app.AddSaleEndpoints();
+app.AddProductServiceEndpoints();
 app.Run();

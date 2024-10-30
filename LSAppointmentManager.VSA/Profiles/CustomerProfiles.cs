@@ -53,7 +53,6 @@ namespace LSAppointmentManager.VSA.Profiles
             public class Request : IUpdateRequest
             {
                 public int Id { get; set; }
-
                 [VNotEmpty("Nombre", ErrorMessage = "Favor de agregar un nombre valido")]
                 public string Name { get; set; }
 

@@ -8,4 +8,4 @@ namespace LSAppointmentManager.VSA.Features.CustomerFeatures
     public class CreateCustomer : AbstractCreateFeature<CustomerRepository, Customer, CreateCustomerDto.Request, CreateCustomerDto.Response>
     {
     }
-}
+} 
