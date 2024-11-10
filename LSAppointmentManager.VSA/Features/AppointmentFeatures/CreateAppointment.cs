@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using LSAppointmentManager.Entities;
-using LSAppointmentManager.Infrastructure.Contracts.Security;
+//using LSAppointmentManager.Infrastructure.Contracts.Security;
 using LSAppointmentManager.Repositories.Repositories;
 using LSAppointmentManager.VSA.Interfaces;
 using Microsoft.AspNetCore.Builder;

@@ -18,5 +18,11 @@ namespace LSAppointmentManager.Entities
         public decimal Subtotal { get; set; }
         public decimal Total { get; set; }
 
+        public void CalculateTotal()
+        {
+            Total = Quantity * Price;
+        }
+
     }
+
 }

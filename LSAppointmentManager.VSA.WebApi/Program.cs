@@ -3,7 +3,7 @@ using LSAppointmentManager.VSA.Services;
 using System.ComponentModel;
 using System.Reflection;
 using LSAppointmentManager.VSA.Services.Endpoints;
-using LSAppointmentManager.Infrastructure.Impl.Security;
+//using LSAppointmentManager.Infrastructure.Impl.Security;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,7 +22,7 @@ builder.Services.AddSwaggerGen(c =>
         return x.Name;
     });
 });
-builder.Services.AddSecurityServices();
+//builder.Services.AddSecurityServices();
 builder.Services.AddMapping();
 builder.Services.AddRepositories(builder.Configuration);
 builder.Services.AddCors();
@@ -47,10 +47,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.AddWorkstationEndpoints();
-app.AddCustomerEndpoints();
-app.AddWorkerEndpoints();
-app.AddAppointmentEndpoints();
+//app.AddWorkstationEndpoints();
+//app.AddCustomerEndpoints();
+//app.AddWorkerEndpoints();
+//app.AddAppointmentEndpoints();
 app.AddSaleEndpoints();
-app.AddProductServiceEndpoints();
+//app.AddProductServiceEndpoints();
 app.Run();
