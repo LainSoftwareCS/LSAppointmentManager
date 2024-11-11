@@ -24,6 +24,9 @@ namespace LSAppointmentManager.Repositories
             services.AddTransient<CustomerRepository>();
             services.AddTransient<WorkerRepository>();
             services.AddTransient<AppointmentRepository>();
+            services.AddTransient<SaleRepository>();
+            services.AddTransient<SaleDetailRepository>();
+
 
             return services;
         }

@@ -1,6 +1,7 @@
 ﻿using LSAppointmentManager.Entities.Abstract;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,5 +16,8 @@ namespace LSAppointmentManager.Entities
         public decimal Discount { get; set; }
         public decimal Taxes { get; set; }
         public decimal? Total { get; set; }
+        [NotMapped]
+        public List<SaleDetail> Details { get; set; } = new List<SaleDetail>();
+
     }
 }

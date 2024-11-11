@@ -15,17 +15,23 @@ namespace LSAppointmentManager.VSA.Profiles
 {
     public class SaleProfiles : Profile
     {
+        
+        public class CreateSaleDetailDto
+        {
+            public int ProductServiceId { get; set; }
+            public decimal Quantity { get; set; }
+            public decimal Price { get; set; }
+        }
         public class CreateSaleDto
         {
+            
             [DisplayName("CreateSaleRequest")]
             public class Request
             {
                 public int CustomerId { get; set; }
                 public DateTime SaleDate { get; set; }
-                public decimal Subtotal { get; set; }
-                public decimal Discount { get; set; }
-                public decimal Taxes { get; set; }
-                public decimal Total { get; set; }
+                public List<CreateSaleDetailDto> Details { get; set; }
+
             }
             [DisplayName("CreateProductResponse")]
             public class Response
@@ -89,6 +95,7 @@ namespace LSAppointmentManager.VSA.Profiles
             CreateMap<UpdateSaleDto.Request, Sale>();
             CreateMap<Sale, UpdateSaleDto.Response>();
             CreateMap<Sale, GetSaleDto.Response>();
+            CreateMap<CreateSaleDetailDto, SaleDetail>();
         }
     }
 }
